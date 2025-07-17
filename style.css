@@ -1,0 +1,100 @@
+/* ===== RESET & BASE ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#000;color:#fff}
+
+/* ===== NAV BAR (fixed to top) ===== */
+nav{
+  position:fixed;
+  top:0;left:0;width:100%;
+  background:#000;            /* solid so content doesn't peek through */
+  border-bottom:1px solid #222;
+  z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 5%;
+}
+
+/* logo */
+nav h1{font-style:italic;letter-spacing:.2cm;font-size:clamp(1.6rem,4vw,2.4rem)}
+nav h1 span{color:#ff004f}
+
+/* nav links */
+nav ul{display:flex;gap:40px}
+nav ul li{list-style:none}
+nav ul li a{
+  color:#fff;text-decoration:none;font-size:1rem;position:relative;transition:color .3s
+}
+nav ul li a::after{
+  content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;
+  background:#ff004f;transition:width .35s
+}
+nav ul li a:hover{color:#ff004f}
+nav ul li a:hover::after{width:100%}
+
+/* ===== HEADER SECTION ===== */
+#header{min-height:100vh;padding-top:90px;display:flex;align-items:center}
+.container{width:90%;max-width:1200px;margin:auto}
+
+.header-text{
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  margin-top:10vh;
+}
+.header-text p{
+  font-size:clamp(.9rem,2vw,1.2rem);letter-spacing:.08em;opacity:.8;
+  animation:fadeIn .8s ease-out .1s both;
+}
+.header-text h1{
+  font-size:clamp(2rem,6vw,3.8rem);font-weight:800;color:#ff004f;
+  transform:translateY(40px);opacity:0;
+  animation:slideUp 1s ease-out .3s forwards;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideUp{to{transform:translateY(0);opacity:1}}
+@keyframes fadeIn{from{opacity:0}to{opacity:.8}}
+/* === DOWNLOAD-CV BUTTON === */
+/* === DOWNLOAD-CV BUTTON (pill + underline hover) === */
+.cv-btn{
+  /* pill shape */
+  display:inline-block;
+  padding:12px 32px;
+  border-radius:40px;
+
+  /* colours & text */
+  background:#ff004f;
+  color:#fff;
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.05em;
+  text-decoration:none;
+
+  /* interaction */
+  position:relative;          /* anchor for underline */
+  overflow:hidden;            /* hide line until it slides in */
+  transition:background .3s, transform .3s, box-shadow .3s;
+  box-shadow:0 8px 20px rgba(255,0,79,.25);
+}
+
+.cv-btn:hover,
+.cv-btn:focus{
+  background:#e60047;         /* slightly darker pink on hover */
+  transform:translateY(-3px);
+  box-shadow:0 12px 24px rgba(255,0,79,.35);
+}
+
+/* underline (matches nav links) */
+.cv-btn::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:2px;
+  background:#fff;            /* white bar, or use currentColor */
+  transition:width .35s;
+}
+
+.cv-btn:hover::after,
+.cv-btn:focus::after{
+  width:100%;
+}
+/* About Section */
