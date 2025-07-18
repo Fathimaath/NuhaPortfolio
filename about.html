@@ -33,7 +33,6 @@
       box-shadow: 0 2px 10px rgba(255,0,79,0.4);
     }
 
-    /* logo */
     nav h1 {
       font-style: italic;
       letter-spacing: 0.2cm;
@@ -45,7 +44,6 @@
       color: #ff004f;
     }
 
-    /* nav links */
     nav ul {
       display: flex;
       gap: 40px;
@@ -82,7 +80,6 @@
       width: 100%;
     }
 
-    /* === RESUME BUTTON === */
     .resume-btn {
       display: inline-block;
       padding: 10px 26px;
@@ -123,12 +120,11 @@
       width: 100%;
     }
 
-    /* ===== ABOUT SECTION ===== */
     main {
-      padding: 100px 5% 40px; /* padding top accounts for fixed nav height */
+      padding: 100px 5% 40px;
       max-width: 1200px;
       margin: 0 auto;
-      opacity: 0; /* Start hidden */
+      opacity: 0;
       animation: fadeInPage 0.8s ease forwards;
     }
 
@@ -143,7 +139,6 @@
       box-shadow: 0 0 30px rgba(255, 0, 79, 0.4);
     }
 
-    /* Left image */
     .about-image img {
       width: 280px;
       height: 280px;
@@ -159,7 +154,6 @@
       transform: scale(1.05);
     }
 
-    /* Right text */
     .about-text {
       flex: 1;
       font-size: 1.1rem;
@@ -175,7 +169,6 @@
       margin-bottom: 15px;
     }
 
-    /* Tabs container */
     .tabs {
       display: flex;
       gap: 25px;
@@ -184,7 +177,6 @@
       justify-content: flex-start;
     }
 
-    /* Tab buttons */
     .tab-btn {
       background: none;
       border: none;
@@ -208,7 +200,6 @@
       font-weight: 700;
     }
 
-    /* Tab content */
     .tab-content {
       opacity: 0;
       transform: translateY(10px);
@@ -240,7 +231,10 @@
       margin-left: 20px;
     }
 
-    /* Internship "Know More" link styling */
+    .tab-content ul ul {
+      margin-top: 8px;
+    }
+
     .know-more {
       color: #ff004f;
       font-weight: 600;
@@ -251,7 +245,6 @@
       text-decoration: underline;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .about-main {
         flex-direction: column;
@@ -268,7 +261,6 @@
       }
     }
 
-    /* Animations */
     @keyframes fadeInPage {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -289,9 +281,7 @@
       <li><a href="project.html">Projects</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li>
-        <a class="resume-btn" href="assets/NuhResume.pdf" download="NuharResume.pdf">
-          Download&nbsp;Resume
-        </a>
+        <a class="resume-btn" href="assets/NuhResume.pdf" download="NuharResume.pdf">Download&nbsp;Resume</a>
       </li>
     </ul>
   </nav>
@@ -307,14 +297,14 @@
         <div class="tabs">
           <button class="tab-btn active" data-tab="education">Education</button>
           <button class="tab-btn" data-tab="skills">Skills</button>
-          <button class="tab-btn" data-tab="internship">Internship</button>
+          <button class="tab-btn" data-tab="internships">Internships</button>
         </div>
 
         <div id="education" class="tab-content active">
           <h3>Education</h3>
           <ul>
-            <li>Bachelor of Technology in Computer Science - PA College of  &nbsp;&nbsp;&nbsp;&nbsp;Engineering (2021-2025)</li>
-            <li>Pre University in - Hira Womens's PU College (2019-2021)</li>
+            <li>Bachelor of Technology in Computer Science - PA College of Engineering (2021-2025)</li>
+            <li>Pre University - Hira Women's PU College (2019-2021)</li>
             <li>High School - AL Saqaf EM School (2009-2019)</li>
           </ul>
         </div>
@@ -322,28 +312,40 @@
         <div id="skills" class="tab-content">
           <h3>Skills</h3>
           <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>React-Native</li>
-            <li>Flutter & Dart</li>
-            <li>Firebase </li>
-            <li>Python & C Languages</li>
+            <li><b>Programming Languages:</b> C, Python, JavaScript</li>
+            <li><b>Mobile App Development:</b> React-Native, Flutter</li>
+            <li><b>Web Development: </b>HTML, CSS, JavaScript</li>
+            <li><b>Database:</b> SQL, Firebase</li>
+            <li><b>Tools and Platforms:</b> GitHub, VS Code, Microsoft Office (Word, Excel)</li>
+            <li><b>Others:</b> Debugging, UI/UX Design, API Integration, Problem Solving</li>
           </ul>
         </div>
 
-        <div id="internship" class="tab-content">
-          <h3>Internship</h3>
+        <div id="internships" class="tab-content">
+          <h3>internships</h3>
           <ul>
             <li>
-              Data Quality Analyst at PA College Of Engineering (2024) 
+              <b>Data Quality Analyst at PA College Of Engineering (2024)</b>
+              <li>Gained knowledge of data quality concepts like accuracy, completeness, and consistency</li>
+          <li>Practiced data profiling, validation, cleansing using Excel, Google Sheets, and Python (Pandas, NumPy)</li>
+  <li>Handled missing values, duplicates, and standardized data formats to improve AI/ML data readiness</li> <br>
+              </ul>
+            </li>
+            <li>
+              <b>Web Development at PA College Of Engineering (2023)</b>
+              <ul>
+                <li>Built responsive web pages using HTML, CSS, and JavaScript</li>
+                <li>Learned Git version control and hosting projects on GitHub</li>
+                <li>Gained knowledge of responsive design and UI principles</li>
+              </ul>
               <a href="project.html" class="know-more" target="_blank" rel="noopener noreferrer"></a>
             </li>
             <li>
-              Web Development  at PA College Of Engineering (2023) 
-              <a href="project.html" class="know-more" target="_blank" rel="noopener noreferrer">Know More</a>
-            </li>
-            <li>
-              Python Programming at  PA College Of Engineering (2022) 
-              <a href="project.html" class="know-more" target="_blank" rel="noopener noreferrer" ></a>
+              <b>Python Programming at PA College Of Engineering (2022)</b>
+              <ul>
+                <li>Understood Python basics: variables, loops, functions, and OOP</li>
+                <li>Practiced file handling and error handling techniques</li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -352,21 +354,17 @@
   </main>
 
   <script>
-    // Tab switching logic
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
     tabButtons.forEach(button => {
       button.addEventListener('click', () => {
-        // Remove active class from all buttons and contents
         tabButtons.forEach(btn => btn.classList.remove('active'));
         tabContents.forEach(tc => {
           tc.classList.remove('active');
-          // For accessibility, optionally hide content
           tc.style.display = 'none';
         });
 
-        // Add active to clicked button and related content
         button.classList.add('active');
         const tab = button.getAttribute('data-tab');
         const activeContent = document.getElementById(tab);
@@ -375,7 +373,6 @@
       });
     });
 
-    // Show first tab content on load (important)
     window.addEventListener('DOMContentLoaded', () => {
       tabContents.forEach(tc => tc.style.display = 'none');
       const firstContent = document.querySelector('.tab-content.active');
